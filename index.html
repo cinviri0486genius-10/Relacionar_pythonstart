@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Python - Conecta los Conceptos</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header>
+        <h1>🐍 Python: Conecta los Conceptos Básicos 💻</h1>
+        <p>Haz clic en una función o palabra clave de la izquierda y únela con su significado correcto a la derecha.</p>
+        <div class="marcador-puntos">✨ Funciones Vinculadas: <span id="contador-puntos">0</span> / 5</div>
+    </header>
+
+    <div class="main-container">
+        <!-- Panel Izquierdo: Funciones/Comandos de Python -->
+        <div class="columna" id="columna-terminos">
+            <!-- Se generan dinámicamente con JavaScript -->
+        </div>
+
+        <!-- Panel Derecho: Explicación o Significado -->
+        <div class="columna" id="columna-definiciones">
+            <!-- Se generan dinámicamente con JavaScript -->
+        </div>
+    </div>
+
+    <!-- Pantalla de Victoria Final -->
+    <div id="modal-victoria" class="modal">
+        <div class="modal-content">
+            <h2>🏆 ¡CÓDIGO COMPILADO CON ÉXITO! 🏆</h2>
+            <p>¡Increíble! Has emparejado toda la sintaxis base. Tu lógica de programación en Python está lista para proyectos más grandes.</p>
+            <button onclick="reiniciarJuego()">🔄 Volver a Vincular</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

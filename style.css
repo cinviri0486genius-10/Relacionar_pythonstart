@@ -1,0 +1,95 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #0f172a; /* Fondo azul oscuro estilo terminal moderno */
+    color: #f8fafc;
+    margin: 0;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    justify-content: center;
+}
+header { text-align: center; margin-bottom: 20px; }
+h1 { color: #ffd43b; font-size: 26px; text-shadow: 0 2px 4px rgba(0,0,0,0.5); margin: 5px; }
+header p { color: #94a3b8; font-size: 15px; }
+.marcador-puntos {
+    font-size: 18px; color: #38bdf8; font-weight: bold; margin-top: 10px;
+    background: #1e293b; padding: 6px 18px; border-radius: 20px; display: inline-block;
+    border: 1px solid #334155;
+}
+
+.main-container {
+    display: flex;
+    gap: 40px;
+    max-width: 850px;
+    width: 100%;
+}
+.columna {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+/* Estilo de los bloques de código */
+.tarjeta-juego {
+    background-color: #1e293b;
+    border: 2px solid #334155;
+    border-radius: 10px;
+    padding: 15px;
+    font-size: 14px;
+    font-weight: 600;
+    text-align: left;
+    cursor: pointer;
+    user-select: none;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+    transition: transform 0.1s, background-color 0.2s, border-color 0.2s;
+    line-height: 1.4;
+}
+.tarjeta-juego:hover {
+    transform: scale(1.02);
+    border-color: #ffd43b; /* Brillo amarillo clásico de Python */
+}
+
+/* Estilo para los bloques de comandos de la izquierda */
+.tarjeta-juego.tipo-termino {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 16px;
+    text-align: center;
+    color: #38bdf8;
+    background-color: #0f172a;
+}
+
+/* ESTADOS INTERACTIVOS */
+.tarjeta-juego.seleccionado {
+    border-color: #ffd43b !important;
+    background-color: #334155 !important;
+    transform: scale(1.03);
+}
+.tarjeta-juego.correcto {
+    background-color: #14532d !important; /* Verde de éxito al compilar */
+    border-color: #22c55e !important;
+    color: #4ade80;
+    cursor: default;
+    pointer-events: none;
+}
+
+/* Modal de Victoria */
+.modal {
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background-color: rgba(15, 23, 42, 0.95); justify-content: center; align-items: center;
+    z-index: 100;
+}
+.modal-content {
+    background-color: #1e293b; padding: 40px; border-radius: 16px;
+    text-align: center; border: 3px solid #ffd43b; max-width: 450px;
+}
+.modal-content h2 { color: #ffd43b; font-size: 24px; margin-top: 0; }
+.modal-content p { color: #cbd5e1; line-height: 1.5; }
+.modal-content button {
+    background-color: #4ade80; color: #0f172a; border: none; padding: 12px 30px;
+    font-size: 16px; font-weight: bold; border-radius: 6px; cursor: pointer; margin-top: 20px;
+    transition: 0.2s;
+}
+.modal-content button:hover { background-color: #ffd43b; }
